@@ -2,9 +2,6 @@
 
 <img src="./feebas3.png" alt="Feebas" width="600">
 
-Introduction text...
-
-
 ## Introduction
 
 Feebas is one of the rarest Pokémon to find in the world of Pokémon. Its rarity stems from the fact that it only appears on a few specific water tiles, chosen randomly in certain locations of the game. These tiles change each day and are notoriously difficult to pinpoint manually. This project was born out of the desire to automate this process, making it easier to find Feebas without the frustration of hours of manual fishing.
@@ -24,8 +21,7 @@ The Feebas Fishing Bot automates the process of locating and catching Feebas. It
 ### 1. Scanning the Map
 The bot begins by taking a screenshot of the game map. Using image recognition, it analyzes the pixels to differentiate between water tiles, land tiles, and obstacles.
 
-#### Screenshot of the map detection process:
-![Insert Map Detection Screenshot Here](INSERT_MAP_DETECTION_IMAGE_LINK_HERE)
+<img src="./grid_with_overlay.png" alt="grid" width="600">
 
 The bot creates a grid system where each tile is marked as one of the following:
 - **1**: Water tile
@@ -36,7 +32,7 @@ The bot creates a grid system where each tile is marked as one of the following:
 The bot overlays a grid on the map and marks the water tiles where fishing can occur. The center tile is always where the player's character is positioned.
 
 #### Screenshot of the grid overlay:
-![Insert Grid Overlay Screenshot Here](INSERT_GRID_OVERLAY_IMAGE_LINK_HERE)
+<img src="./grid.png" alt="water" width="600">
 
 ### 3. Navigating the Map
 Using Depth-First Search (DFS), the bot ensures that every water tile is visited and fished at least twice. DFS allows the bot to systematically traverse the water grid, ensuring no tiles are missed.
@@ -47,8 +43,7 @@ For each water tile:
 2. If no Pokémon is caught, it retries fishing on the same tile.
 3. If a Pokémon is caught, it identifies the species using Optical Character Recognition (OCR) from a screenshot of the battle screen.
 
-#### Screenshot of the fishing process:
-![Insert Fishing Process Screenshot Here](INSERT_FISHING_PROCESS_IMAGE_LINK_HERE)
+<img src="./battle.jpg" alt="battle" width="600">
 
 ### 5. Detecting Feebas
 If the caught Pokémon is Feebas, the bot:
@@ -61,9 +56,6 @@ If Feebas is not caught, the bot moves to the next tile and repeats the process.
 The bot integrates with a messaging system to send alerts to the user. The user can reply with:
 - **"Run"**: Instructs the bot to flee the battle and continue fishing.
 - **"Feebas"**: Confirms the presence of Feebas and stops the bot.
-
-#### Screenshot of a user alert:
-![Insert User Alert Screenshot Here](INSERT_USER_ALERT_IMAGE_LINK_HERE)
 
 ### 7. Completing the Task
 The bot stops running once Feebas is confirmed. Until then, it tirelessly fishes every tile, ensuring no spots are left unchecked.
@@ -120,14 +112,6 @@ The bot stops running once Feebas is confirmed. Until then, it tirelessly fishes
    ```bash
    python main.py
    ```
-
-## Screenshots
-
-### 1. Feebas Detection
-![Insert Feebas Detection Screenshot Here](INSERT_FEEBAS_DETECTION_IMAGE_LINK_HERE)
-
-### 2. User Confirmation
-![Insert User Confirmation Screenshot Here](INSERT_USER_CONFIRMATION_IMAGE_LINK_HERE)
 
 ## Future Enhancements
 - Add support for multi-threading to optimize performance.
