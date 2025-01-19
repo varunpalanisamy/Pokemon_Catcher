@@ -1,6 +1,9 @@
 # Feebas Fishing Bot
 
-![Feebas](https://www.serebii.net/games/feebas3.png)
+<img src="./feebas3.png" alt="Feebas" width="600">
+
+Introduction text...
+
 
 ## Introduction
 
